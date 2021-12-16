@@ -1,0 +1,16 @@
+import matplotlib.pyplot as plt
+f = open("sample.txt", "r")
+x, y = [],[]
+for row in f.readlines():
+    x.append(int(row.split()[0]))
+    y.append(int(row.split()[1]))
+print(x, y)
+plt.plot(x, y)
+# Set the x axis label of the current axis.
+plt.xlabel('x - axis')
+# Set the y axis label of the current axis.
+plt.ylabel('y - axis')
+# Set a title 
+plt.title('Sample graph!')
+# Display a figure.
+plt.show()
